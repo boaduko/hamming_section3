@@ -1,0 +1,18 @@
+var compute;
+
+compute = function(first, second) {
+	var count = 0;
+	
+	if (first.length != second.length) 
+		throw new Error('DNA strands must be of equal length.');
+
+	for( i = 0; i < first.length; i++ ) {
+		if (first.charAt(i) != second.charAt(i)) 
+			count++;
+	}
+	return count;
+};
+
+module.exports = {
+	compute: compute
+};
